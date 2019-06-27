@@ -1,5 +1,4 @@
 # Solving-the-problem-of-01-knapsack-based-on-whale-algorithm
-# It is not perfect
 # It does not produce an optimal solution
 
 
