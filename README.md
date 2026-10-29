@@ -1,9 +1,35 @@
-# Solving-the-problem-of-01-knapsack-based-on-whale-algorithm
-# It does not produce an optimal solution
+# 鲸鱼算法求解 0-1 背包问题
 
+用简化的鲸鱼优化算法（Whale Optimization Algorithm, WOA）求解 0-1 背包问题。每只"鲸鱼"是一个 0/1 选择向量，每轮迭代向当前价值最高且不超重的鲸鱼靠拢。
 
-#2019-06-27更新
-#增加了程序运行的计时功能
+> 该算法得到的是近似解，**不保证最优**。
 
-#2019-06-25更新
-#减少了迭代次数，优化了运行时间
+## 目录结构
+
+| 文件 | 内容 |
+| --- | --- |
+| `src/woa-updated-20190627-1031.py` | 算法主程序 |
+| `input.txt` | 测试数据：价值、重量、背包容量（GBK 编码） |
+| `output.txt` | 对应的运行结果 |
+
+## 运行
+
+```bash
+python src/woa-updated-20190627-1031.py
+```
+
+按提示依次输入：
+
+1. 各物品价值，逗号分隔
+2. 各物品重量，逗号分隔
+3. 背包容量
+
+程序输出选择向量、总价值和耗时。
+
+- 依赖 `numpy`
+- 计时使用了 `time.clock()`，该函数在 Python 3.8 中已移除；在新版 Python 上运行需改为 `time.perf_counter()`
+
+## 更新记录
+
+- 2019-06-27：增加运行计时
+- 2019-06-25：减少迭代次数，缩短运行时间
